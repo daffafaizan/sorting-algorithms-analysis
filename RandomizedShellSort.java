@@ -3,6 +3,11 @@ import java.util.*;
 public class RandomizedShellSort implements SortingAlgorithms {
     public static int C = 1; // number of region compare-exchange repetitions
 
+    @Override
+    public String name() {
+        return "Randomized Shell Sort";
+    }
+
     public static void exchange(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];

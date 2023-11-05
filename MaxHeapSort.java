@@ -1,6 +1,11 @@
 public class MaxHeapSort implements SortingAlgorithms {
 
     @Override
+    public String name() {
+        return "Max-Heap Sort";
+    }
+
+    @Override
     public void sort(int arr[]) {
         int n = arr.length;
 

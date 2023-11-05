@@ -21,13 +21,17 @@ public class Main {
 
                     // Dataset Analysis
                     System.out.println("Analyzing: " + filename);
+                    System.out.println("---------------------------------------");
                     AlgorithmAnalysis.analyze(array.clone(), maxHeapSort);
+                    System.out.println(" ");
                     AlgorithmAnalysis.analyze(array.clone(), randomizedShellSort);
+                    System.out.println("---------------------------------------");
 
                 } catch (IOException e) {
-                    System.out.println("Error: File " + filename + " not found.");
+                    System.err.println("Error: Unable to access file: " + filename);
                 }
 
+                System.out.println(" ");
                 System.out.println(" ");
             }
         }
