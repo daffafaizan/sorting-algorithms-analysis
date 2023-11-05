@@ -15,7 +15,7 @@ public class AlgorithmAnalysis {
         long executionTime = endTime - startTime;
         long memoryUsage = endMemory - startMemory;
 
-        System.out.println("Execution time: " + executionTime / 1e6 + " ms");
+        System.out.println("Execution time: " + executionTime + " ms");
         System.out.println("Memory usage: " + memoryUsage / 1024 + " KB");
         isSorted(array);
     }
