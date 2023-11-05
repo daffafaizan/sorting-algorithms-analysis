@@ -4,18 +4,18 @@ public class AlgorithmAnalysis {
         System.out.println("Dataset sorted using " + sortingAlgorithm.name());
 
         System.gc(); 
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         long startMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         sortingAlgorithm.sort(array);
 
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
         long endMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         long executionTime = endTime - startTime;
         long memoryUsage = endMemory - startMemory;
 
-        System.out.println("Execution time: " + executionTime + " ms");
+        System.out.println("Execution time: " + executionTime / (double) 1000000 + " ms");
         System.out.println("Memory usage: " + memoryUsage / 1024 + " KB");
         isSorted(array);
     }
